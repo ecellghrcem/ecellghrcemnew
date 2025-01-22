@@ -1,10 +1,5 @@
 "use client";
 import React from "react";
-import { SparklesCore } from "../components/sparkles";
-import { Spotlight } from "@/components/ui/spotlight";
-import Image from 'next/image';
-import { motion } from "framer-motion";
-import ContactPage from "@/components/Contact";
 import { HeroParallax } from "@/components/hero-parallax";
 
 export const products = [
@@ -76,7 +71,6 @@ export const products = [
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
   },
- 
   {
     title: "Creme Digital",
     link: "https://cremedigital.com",
@@ -103,12 +97,12 @@ export const products = [
   },
 ];
 
-export default function SparklesPreview() {
+export default function Hero() {
   return (
     <div>
       <div>
-      <HeroParallax products={products} />
-    </div>
+       <HeroParallax products={products} />
+      </div>
     </div>
   );
 }
