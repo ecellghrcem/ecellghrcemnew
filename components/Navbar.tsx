@@ -1,0 +1,214 @@
+"use client";
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import * as HoverCard from "@radix-ui/react-hover-card";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // import icons for the hamburger menu
+import Link from "next/link";
+import logo from '../public/Ecell.ico';
+import Image from 'next/image';
+
+function Navbar({ className }: { className?: string }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const menuItems = (
+    <>
+      <motion.div
+        whileHover={{ scale: 1.1, color: "#ff8a00" }}
+        whileTap={{ scale: 0.9 }}
+        className="mx-4 cursor-pointer"
+      >
+        <Link href="/">
+          <span>Home</span>
+        </Link>
+      </motion.div>
+      <motion.div
+        whileHover={{ scale: 1.1, color: "#ff8a00" }}
+        whileTap={{ scale: 0.9 }}
+        className="mx-4 cursor-pointer"
+      >
+        <Link href="/aboutus">
+        <span>About Us</span>
+        </Link>
+      </motion.div>
+      <motion.div
+        whileHover={{ scale: 1.1, color: "#ff8a00" }}
+        whileTap={{ scale: 0.9 }}
+        className="mx-4 cursor-pointer"
+      >
+        <Link href="/events">
+        <span>Events</span>
+        </Link>
+      </motion.div>
+      <motion.div
+        whileHover={{ scale: 1.1, color: "#ff8a00" }}
+        whileTap={{ scale: 0.9 }}
+        className="mx-4 cursor-pointer"
+      >
+        <HoverCard.Root openDelay={100} closeDelay={100}>
+          <HoverCard.Trigger asChild>
+            <Link href={"/teams"}>
+            <span>Meet Our Team</span>
+            </Link>
+          </HoverCard.Trigger>
+          <HoverCard.Portal>
+            <HoverCard.Content className="bg-black text-white  mt-[22px] w-[200px] z-50 border-[1px] border-[#f59d45] rounded-lg cursor-pointer p-3">
+              <div>
+                <motion.div
+                  whileHover={{ backgroundColor: "#333332" }}
+                  className="p-2 rounded-lg cursor-pointer"
+                >
+                  <Link href={"/teams/coreteam"}>
+                  <span className="font-bold">Core Team</span>
+                  </Link>
+                </motion.div>
+                <motion.div
+                  whileHover={{ backgroundColor: "#333332" }}
+                  className="p-2 rounded-lg cursor-pointer"
+                >
+                   <Link href={"/teams/technicalteam"}>
+                  <span className="font-bold">TechnicalTeam</span>
+                  </Link>
+                </motion.div>
+                <motion.div
+                  whileHover={{ backgroundColor: "#333332" }}
+                  className="p-2 rounded-lg cursor-pointer"
+                >
+                  <Link href={"/teams/designteam"}>
+                  <span className="font-bold">Design Team</span>
+                  </Link>
+                </motion.div>
+                <motion.div
+                  whileHover={{ backgroundColor: "#333332" }}
+                  className="p-2 rounded-lg cursor-pointer"
+                >
+                  <Link href={"/teams/prteam"}>
+                  <span className="font-bold">PR Team</span>
+                  </Link>
+                </motion.div>
+                <motion.div
+                  whileHover={{ backgroundColor: "#333332" }}
+                  className="p-2 rounded-lg cursor-pointer"
+                ><Link href={"/teams/eventmanagement"}>
+                  <span className="font-bold">Management Team</span>
+                </Link>
+                </motion.div>
+
+              </div>
+            </HoverCard.Content>
+          </HoverCard.Portal>
+        </HoverCard.Root>
+      </motion.div>
+      <motion.div
+        whileHover={{ scale: 1.1, color: "#ff8a00" }}
+        whileTap={{ scale: 0.9 }}
+        className="mx-4 cursor-pointer"
+      >
+        <Link href="/contactus">
+        <span>Contact Us</span>
+        </Link>
+      </motion.div>
+      {/* <motion.div
+        whileHover={{ scale: 1.1, color: "#ff8a00" }}
+        whileTap={{ scale: 0.9 }}
+        className="mx-4 cursor-pointer"
+      >
+        <span>Blogs</span>
+      </motion.div> */}
+      <motion.div
+        whileHover={{ scale: 1.1, color: "#ff8a00" }}
+        whileTap={{ scale: 0.9 }}
+        className="mx-4 cursor-pointer"
+      >
+        <HoverCard.Root openDelay={100} closeDelay={100}>
+          <HoverCard.Trigger asChild>
+            <Link href="/Auth/Login">
+            <span>Join Us</span>
+            </Link>
+          </HoverCard.Trigger>
+          <HoverCard.Portal>
+            <HoverCard.Content className="bg-black text-white  mt-[22px] w-[120px] z-50 border-[1px] border-[#ff8a00] rounded-lg cursor-pointer p-3">
+              <div>
+                <motion.div
+                  whileHover={{ backgroundColor: "#333332" }}
+                  className="p-2 rounded-lg cursor-pointer"
+                >
+                  <Link href="/Auth/Signup">
+                    <span className="font-bold">Signup</span>
+                  </Link>
+                </motion.div>
+                <motion.div
+                  whileHover={{ backgroundColor: "#333332" }}
+                  className="p-2 rounded-lg cursor-pointer"
+                >
+                  <Link href="/Auth/Login">
+                    <span className="font-bold">Login</span>
+                  </Link>
+                </motion.div>
+              </div>
+            </HoverCard.Content>
+          </HoverCard.Portal>
+        </HoverCard.Root>
+      </motion.div>
+    </>
+  );
+
+  return (
+    <>
+      {/* Big Screen Navbar */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="w-[100vw] fixed top-0 z-50 mt-8 text-white  flex justify-center items-center"
+      >
+        <div
+          className="w-8/12 p-5 shadow-lg shadow-orange-500/50 bg-black rounded-full border-[#e98752] border-[2px] hidden xl:inline-block"
+          id="navBarDiv"
+        >
+          <div className="w-full h-full flex items-center justify-between px-5">
+            {menuItems}
+          </div>
+        </div>
+      </motion.div>
+
+      {/* Hamburger Navbar */}
+      <div className="w-[100vw] fixed top-0 z-50 mt-8 text-white  xl:hidden flex justify-between items-center px-4">
+        <div className="flex items-center">
+        <Image src={logo} alt="College Club" width={50} height={50} />
+          <span className="text-2xl font-bold">GHRCEM Ecell</span>
+        </div>
+        <div className="flex items-center">
+          {isOpen ? (
+            <AiOutlineClose
+              size={30}
+              onClick={toggleMenu}
+              className="cursor-pointer"
+            />
+          ) : (
+            <AiOutlineMenu
+              size={30}
+              onClick={toggleMenu}
+              className="cursor-pointer"
+            />
+          )}
+        </div>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="absolute top-16 left-0 w-full bg-black text-white p-5 flex flex-col items-center"
+          >
+            {menuItems}
+          </motion.div>
+        )}
+      </div>
+    </>
+  );
+}
+
+export default Navbar;
