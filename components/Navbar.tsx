@@ -54,52 +54,6 @@ function Navbar({ className }: { className?: string }) {
             <span>Meet Our Team</span>
             </Link>
           </HoverCard.Trigger>
-          <HoverCard.Portal>
-            <HoverCard.Content className="bg-black text-white  mt-[22px] w-[200px] z-50 border-[1px] border-[#ffffff] rounded-lg cursor-pointer p-3">
-              <div>
-                <motion.div
-                  whileHover={{ backgroundColor: "#333332" }}
-                  className="p-2 rounded-lg cursor-pointer"
-                >
-                  <Link href={"/teams/coreteam"}>
-                  <span className="font-bold">Core Team</span>
-                  </Link>
-                </motion.div>
-                <motion.div
-                  whileHover={{ backgroundColor: "#333332" }}
-                  className="p-2 rounded-lg cursor-pointer"
-                >
-                   <Link href={"/teams/technicalteam"}>
-                  <span className="font-bold">TechnicalTeam</span>
-                  </Link>
-                </motion.div>
-                <motion.div
-                  whileHover={{ backgroundColor: "#333332" }}
-                  className="p-2 rounded-lg cursor-pointer"
-                >
-                  <Link href={"/teams/designteam"}>
-                  <span className="font-bold">Design Team</span>
-                  </Link>
-                </motion.div>
-                <motion.div
-                  whileHover={{ backgroundColor: "#333332" }}
-                  className="p-2 rounded-lg cursor-pointer"
-                >
-                  <Link href={"/teams/prteam"}>
-                  <span className="font-bold">PR Team</span>
-                  </Link>
-                </motion.div>
-                <motion.div
-                  whileHover={{ backgroundColor: "#333332" }}
-                  className="p-2 rounded-lg cursor-pointer"
-                ><Link href={"/teams/eventmanagement"}>
-                  <span className="font-bold">Management Team</span>
-                </Link>
-                </motion.div>
-
-              </div>
-            </HoverCard.Content>
-          </HoverCard.Portal>
         </HoverCard.Root>
       </motion.div>
       <motion.div
