@@ -57,7 +57,8 @@ export default function Page(): JSX.Element {
     <div>
       <div>
        <Hero />
-       <div className="p-20">
+       <div className="pl-10 pr-10">
+        <h1 className=" m-10 text-7xl font-bold">About Us</h1>
        <StickyScroll content={content} />
        </div>
       </div>

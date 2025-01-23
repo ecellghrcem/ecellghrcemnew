@@ -166,7 +166,7 @@ function Navbar({ className }: { className?: string }) {
         className="w-[100vw] fixed top-0 z-50 mt-8 text-white  flex justify-center items-center"
       >
         <div
-          className="w-8/12 p-5  bg-black rounded-full border-[#fff] border-[2px] hidden xl:inline-block"
+          className="w-8/12 p-5  bg-black rounded-full border-[#fff] border-[1px] hidden xl:inline-block"
           id="navBarDiv"
         >
           <div className="w-full h-full flex items-center justify-between px-5">
@@ -179,7 +179,7 @@ function Navbar({ className }: { className?: string }) {
       <div className="w-[100vw] fixed top-0 z-50 mt-8 text-white  xl:hidden flex justify-between items-center px-4">
         <div className="flex items-center">
         <Image src={logo} alt="College Club" width={50} height={50} />
-          <span className="text-2xl font-bold">Ideas Into Action</span>
+          {/* <span className="text-2xl font-bold"></span> */}
         </div>
         <div className="flex items-center">
           {isOpen ? (
