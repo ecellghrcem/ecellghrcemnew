@@ -84,7 +84,7 @@ function Navbar({ className }: { className?: string }) {
             </Link>
           </HoverCard.Trigger>
           <HoverCard.Portal>
-            <HoverCard.Content className="bg-black text-white  mt-[22px] w-[120px] z-50 border-[1px] border-[#ff8a00] rounded-lg cursor-pointer p-3">
+            <HoverCard.Content className="bg-black text-white  mt-[22px] w-[120px] z-50 border-[1px] border-[#ffffff] rounded-lg cursor-pointer p-3">
               <div>
                 <motion.div
                   whileHover={{ backgroundColor: "#333332" }}
@@ -120,7 +120,7 @@ function Navbar({ className }: { className?: string }) {
         className="w-[100vw] fixed top-0 z-50 mt-8 text-white  flex justify-center items-center"
       >
         <div
-          className="w-8/12 p-5 shadow-lg shadow-orange-500/50 bg-black rounded-full border-[#e98752] border-[2px] hidden xl:inline-block"
+          className="w-8/12 p-5  bg-black rounded-full border-[#fff] border-[2px] hidden xl:inline-block"
           id="navBarDiv"
         >
           <div className="w-full h-full flex items-center justify-between px-5">
@@ -133,7 +133,7 @@ function Navbar({ className }: { className?: string }) {
       <div className="w-[100vw] fixed top-0 z-50 mt-8 text-white  xl:hidden flex justify-between items-center px-4">
         <div className="flex items-center">
         <Image src={logo} alt="College Club" width={50} height={50} />
-          <span className="text-2xl font-bold">GHRCEM Ecell</span>
+          <span className="text-2xl font-bold">Ideas Into Action</span>
         </div>
         <div className="flex items-center">
           {isOpen ? (
