@@ -1,35 +1,60 @@
+"use client";
 import React from "react";
-import { cn } from "@/utils/cn";
-import { Spotlight } from "@/components/ui/spotlight";
-import Image from 'next/image';
-import logo from '@/public/Ecell.ico'; 
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
+import Image from "next/image";
 
-export default function SpotlightPreview() {
+const content = [
+  {
+    title: "Collaborative Editing",
+    description:
+      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+        Collaborative Editing
+      </div>
+    ),
+  },
+  {
+    title: "Real time changes",
+    description:
+      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+    content: (
+      <div className="h-full w-full  flex items-center justify-center text-white">
+        <Image
+          src="/Ecell.ico"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="linear board demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Version control",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+        Version control
+      </div>
+    ),
+  },
+  {
+    title: "Running out of content",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+        Running out of content
+      </div>
+    ),
+  },
+];
+export default function StickyScrollRevealDemo() {
   return (
-    <div>
-        <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
-      <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="white"
-      />
-      <div className=" p-4 max-w-7xl mt-10 flex justify-content flex-col  mx-auto relative z-10  w-full pt-20 md:pt-0">
-        <h1 className="text-4xl text-center md:text-7xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-          ABOUT US<br />
-        </h1>
-        <p className="mt-4 font-normal text-base text-neutral-300 max-w-2xl mx-auto">
-          
-        </p>
-      </div>
-      <div className=" justify-content md:justify-end mt-8 md:mr-40 hidden sm:flex mr-40 ">
-      <Image
-        src={logo}
-        width={500}
-        height={500}
-        alt="Picture of the author"
-        className="hidden md:block"
-      />
-      </div>
-     </div>
+    <div className="p-10 mt-20">
+      <StickyScroll content={content} />
     </div>
   );
 }
