@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import { ActivityTimeline } from "@/components/ActivityTimeline";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Image from "next/image";
 
@@ -51,10 +52,18 @@ const content = [
     ),
   },
 ];
+
 export default function StickyScrollRevealDemo() {
   return (
     <div className="p-10 mt-20">
       <StickyScroll content={content} />
+      <div className="bg-black text-white min-h-screen">
+    
+    <div className="py-16">
+      <h2 className="text-3xl font-bold text-center mb-10">Our Journey</h2>
+      <ActivityTimeline />
+    </div>
+  </div>
     </div>
   );
 }

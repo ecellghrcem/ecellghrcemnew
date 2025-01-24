@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "@/components/hero-section"
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import Image from "next/image";
+import { AnimatedTestimonialsDemo } from "@/components/Testimonial";
 
 const content = [
   {
@@ -60,6 +61,10 @@ export default function Page(): JSX.Element {
        <div className="pl-10 pr-10">
         <h1 className=" m-10 text-7xl font-bold">About Us</h1>
        <StickyScroll content={content} />
+       </div>
+       <div>
+       <h1 className=" m-10 text-7xl font-bold">Testimonial</h1>
+       <AnimatedTestimonialsDemo/>
        </div>
       </div>
     </div>
