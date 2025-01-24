@@ -64,9 +64,18 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
+      style={{
+        scrollbarWidth: "none", // For Firefox
+        msOverflowStyle: "none", // For Internet Explorer and Edge
+      }}
       className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10"
       ref={ref}
     >
+      <style jsx>{`
+    div::-webkit-scrollbar {
+      display: none; /* For Chrome, Safari, and Opera */
+    }
+  `}</style>
       <div className="div relative flex items-start px-4">
         <div className="max-w-2xl">
           {content.map((item, index) => (

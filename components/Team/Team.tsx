@@ -1,24 +1,13 @@
-"use client";
+"use client"
 
-import React, { useState, useCallback } from "react";
-import {
-  Linkedin,
-  Mail,
-  Code,
-  Megaphone,
-  Palette,
-  Calendar,
-  PenTool,
-  DollarSign,
-  Users,
-  Github,
-} from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
-import type { Teams, TeamMember } from "../../libs/team-data";
-import Particles from "react-particles";
-import { type Engine } from "tsparticles-engine";
-import { loadFull } from "tsparticles";
-import { tsParticles } from "@tsparticles/engine";
+import React, { useState, useCallback } from "react"
+import { Linkedin, Mail, Code, Megaphone, Palette, Calendar, PenTool, DollarSign, Users, Github } from "lucide-react"
+import { motion, AnimatePresence } from "framer-motion"
+import type { Teams, TeamMember } from "../../libs/team-data"
+import Particles from "react-particles"
+import type { Engine } from "tsparticles-engine"
+import { loadFull } from "tsparticles"
+import { tsParticles } from "@tsparticles/engine"
 
 const teamIcons: { [key in keyof Teams]: JSX.Element } = {
   Core: <Users className="w-6 h-6" />,
@@ -28,28 +17,35 @@ const teamIcons: { [key in keyof Teams]: JSX.Element } = {
   "Public Relations": <Megaphone className="w-6 h-6" />,
   "Event Management": <Calendar className="w-6 h-6" />,
   Content: <PenTool className="w-6 h-6" />,
-};
+}
 
 interface TeamClientProps {
-  initialTeams: Teams;
+  initialTeams: Teams
 }
 
 export default function TeamClient({ initialTeams }: TeamClientProps) {
-  const [activeTeam, setActiveTeam] = useState<keyof Teams>("Core");
-  const [teams] = useState<Teams>(initialTeams);
+  const [activeTeam, setActiveTeam] = useState<keyof Teams>("Core")
+  const [teams, setTeams] = useState<Teams>(initialTeams)
   const particlesInit = useCallback(async (engine: Engine) => {
-    await loadFull(tsParticles);
-  }, []);
+    await loadFull(tsParticles)
+  }, [])
+
+  // Error handling: If teams is undefined, set it to an empty object
+  if (!teams) {
+    setTeams({} as Teams)
+  }
+
+  const teamNames = Object.keys(teams) as Array<keyof Teams>
 
   return (
-    <div className="min-h-screen pt-16 text-white relative overflow-hidden">
+    <div className="min-h-screen pt-16 text-white relative overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black">
       <Particles
         id="tsparticles"
         init={particlesInit}
         options={{
           background: {
             color: {
-              value: "#000000",
+              value: "transparent",
             },
           },
           fpsLimit: 120,
@@ -83,7 +79,7 @@ export default function TeamClient({ initialTeams }: TeamClientProps) {
               color: "#ffffff",
               distance: 150,
               enable: true,
-              opacity: 0.5,
+              opacity: 0.3,
               width: 1,
             },
             collisions: {
@@ -96,7 +92,7 @@ export default function TeamClient({ initialTeams }: TeamClientProps) {
                 default: "bounce",
               },
               random: false,
-              speed: 1,
+              speed: 0.5,
               straight: false,
             },
             number: {
@@ -104,16 +100,16 @@ export default function TeamClient({ initialTeams }: TeamClientProps) {
                 enable: true,
                 area: 800,
               },
-              value: 80,
+              value: 60,
             },
             opacity: {
-              value: 0.5,
+              value: 0.3,
             },
             shape: {
               type: "circle",
             },
             size: {
-              value: { min: 1, max: 5 },
+              value: { min: 1, max: 3 },
             },
           },
           detectRetina: true,
@@ -123,7 +119,7 @@ export default function TeamClient({ initialTeams }: TeamClientProps) {
       <section className="py-20 relative z-10">
         <div className="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
           <motion.h1
-            className="mb-6 text-4xl font-bold"
+            className="mb-6 text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-orange-400 to-pink-600"
             initial={{ opacity: 0, y: -50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, type: "spring" }}
@@ -149,13 +145,13 @@ export default function TeamClient({ initialTeams }: TeamClientProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, type: "spring", delay: 0.4 }}
           >
-            {(Object.keys(teams) as Array<keyof Teams>).map((teamName) => (
+            {teamNames.map((teamName) => (
               <motion.button
                 key={teamName}
                 onClick={() => setActiveTeam(teamName)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 flex items-center space-x-2 ${
                   activeTeam === teamName
-                    ? "bg-orange-500 text-white shadow-lg scale-105"
+                    ? "bg-gradient-to-r from-orange-500 to-pink-600 text-white shadow-lg scale-105"
                     : "bg-gray-800 text-gray-300 hover:bg-gray-700 hover:text-white hover:scale-105"
                 }`}
                 whileHover={{ scale: 1.1, rotate: 5 }}
@@ -176,10 +172,10 @@ export default function TeamClient({ initialTeams }: TeamClientProps) {
               exit={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.5 }}
             >
-              {teams[activeTeam].map((member: TeamMember, index: number) => (
+              {teams[activeTeam]?.map((member: TeamMember, index: number) => (
                 <motion.div
                   key={member.id}
-                  className="overflow-hidden bg-gray-800 shadow-xl rounded-xl mx-auto w-full max-w-[280px]"
+                  className="overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 shadow-xl rounded-xl mx-auto w-full max-w-[300px] border border-gray-700"
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -189,11 +185,11 @@ export default function TeamClient({ initialTeams }: TeamClientProps) {
                     <motion.img
                       src={member.image || "/placeholder.svg"}
                       alt={member.name}
-                      className="object-cover w-full h-64"
+                      className="object-cover w-full h-72"
                       whileHover={{ scale: 1.1 }}
                       transition={{ duration: 0.3 }}
                     />
-                    <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-gray-900 to-transparent"></div>
+                    <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-gray-900 to-transparent"></div>
                     <div className="absolute text-white bottom-4 left-4">
                       <motion.h3
                         className="mb-1 text-2xl font-bold"
@@ -204,7 +200,7 @@ export default function TeamClient({ initialTeams }: TeamClientProps) {
                         {member.name}
                       </motion.h3>
                       <motion.p
-                        className="font-medium text-gray-300"
+                        className="font-medium text-orange-400"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, delay: 0.3 }}
@@ -215,7 +211,7 @@ export default function TeamClient({ initialTeams }: TeamClientProps) {
                   </div>
                   <div className="p-6">
                     <motion.p
-                      className="mb-4 text-gray-300"
+                      className="mb-4 text-gray-300 text-sm"
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ duration: 0.5, delay: 0.4 }}
@@ -271,5 +267,6 @@ export default function TeamClient({ initialTeams }: TeamClientProps) {
         </div>
       </section>
     </div>
-  );
+  )
 }
+

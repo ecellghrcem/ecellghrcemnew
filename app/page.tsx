@@ -56,7 +56,7 @@ const content = [
 export default function Page(): JSX.Element {
   return (
     <div>
-      <div>
+      <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black">
        <Hero />
        <div className="pl-10 pr-10">
         <h1 className=" m-10 text-7xl font-bold">About Us</h1>

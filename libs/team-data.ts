@@ -57,12 +57,12 @@ export const teams: Teams = {
   'Tech': [
     {
       id: 5,
-      name: "David White",
-      role: "Tech Lead",
+      name: "Shubham Sahu",
+      role: "Tech Member",
       image: 'https://picsum.photos/200/300?random=1',
       bio: "David is an expert in AI and machine learning, working tirelessly to improve the tech ecosystem.",
       linkedin: "https://www.linkedin.com/in/davidwhite",
-      github: "https://github.com/davidwhite",
+      github: "https://github.com/02-Shubham",
       mail: "davidwhite@example.com"
     },
     {
