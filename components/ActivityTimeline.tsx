@@ -39,7 +39,7 @@ const timelineItems: TimelineItem[] = [
 
 export function ActivityTimeline() {
   return (
-    <div className="container mx-auto w-full h-full bg-black text-white">
+    <div className="container mx-auto w-full h-full bg-inherit text-white">
       <div className="relative wrap overflow-hidden p-10 h-full">
         <div className="border-2-2 absolute border-opacity-20 border-gray-300 h-full border left-1/2"></div>
         {timelineItems.map((item, index) => (
@@ -54,14 +54,14 @@ export function ActivityTimeline() {
           >
             <div className="order-1 w-5/12"></div>
             <motion.div
-              className="z-20 flex items-center order-1 bg-black shadow-xl w-8 h-8 rounded-full"
+              className="z-20 flex items-center order-1 bg-gradient-to-br from-gray-900 via-gray-800 to-black shadow-xl w-8 h-8 rounded-full"
               whileHover={{ scale: 1.2, rotate: 360 }}
               transition={{ type: "spring", stiffness: 260, damping: 20 }}
             >
               <h1 className="mx-auto font-semibold text-lg text-white">{index + 1}</h1>
             </motion.div>
             <motion.div
-              className="order-1 bg-black rounded-lg shadow-xl w-5/12 px-6 py-4"
+              className="order-1 bg-gradient-to-br from-gray-900 via-gray-800 to-black rounded-lg shadow-xl w-5/12 px-6 py-4"
               whileHover={{ scale: 1.03, boxShadow: "0px 0px 8px rgb(255,255,255)" }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >

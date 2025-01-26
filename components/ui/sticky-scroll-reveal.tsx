@@ -42,7 +42,7 @@ export const StickyScroll = ({
 
   const backgroundColors = [
     // "var(--slate-900)",
-    "var(--black)",
+    "var(--bg-gradient-to-br from-gray-900 via-gray-800 to-black)",
     // "var(--neutral-900)",
   ];
   const linearGradients = [
@@ -51,13 +51,13 @@ export const StickyScroll = ({
     "linear-gradient(to bottom right, var(--orange-500), var(--yellow-500))",
   ];
 
-  const [backgroundGradient, setBackgroundGradient] = useState(
-    linearGradients[0]
-  );
+  // const [backgroundGradient, setBackgroundGradient] = useState(
+  //   linearGradients[0]
+  // );
 
-  useEffect(() => {
-    setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
-  }, [activeCard]);
+  // useEffect(() => {
+  //   setBackgroundGradient(linearGradients[activeCard % linearGradients.length]);
+  // }, [activeCard]);
 
   return (
     <motion.div
@@ -108,7 +108,7 @@ export const StickyScroll = ({
         </div>
       </div>
       <div
-        style={{ background: backgroundGradient }}
+        // style={{ background: backgroundGradient }}
         className={cn(
           "hidden lg:block h-60 w-80 rounded-md bg-white sticky top-10 overflow-hidden",
           contentClassName

@@ -108,9 +108,8 @@ export const Header = () => {
         E-CELL<br/> GHRCEM
       </h1>
       <p className="max-w-2xl text-base md:text-xl mt-8 dark:text-neutral-200">
-        We build beautiful products with the latest technologies and frameworks.
-        We are a team of passionate developers and designers that love to build
-        amazing products.
+      Join a dynamic community where innovation meets
+      opportunity. Through mentorship, competitions ,and hands-on workshops, we empower entrepreneurs to turn their ideas into reality.
       </p>
     </div>
   );
