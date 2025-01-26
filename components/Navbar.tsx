@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import * as HoverCard from "@radix-ui/react-hover-card";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai"; // import icons for the hamburger menu
 import Link from "next/link";
-import logo from '../public/Ecell.ico';
+import logo from '../public/Ecelllogo.jpg';
 import Image from 'next/image';
 
 function Navbar({ className }: { className?: string }) {
@@ -120,7 +120,7 @@ function Navbar({ className }: { className?: string }) {
         className="w-[100vw] fixed top-0 z-50 mt-8 text-white  flex justify-center items-center"
       >
         <div
-          className="w-8/12 p-5  bg-black rounded-full border-[#fff] border-[1px] hidden xl:inline-block"
+          className="w-8/12 p-5  bg-black rounded-full border-[#464646] border-[1px] hidden xl:inline-block"
           id="navBarDiv"
         >
           <div className="w-full h-full flex items-center justify-between px-5">

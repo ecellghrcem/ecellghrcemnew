@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import logo from '@/public/Ecell.ico'; 
+import logo from '@/public/Ecelllogo.jpg'; 
 
 const teamMembers = [
   { id: 1, name: 'name', imageSrc: ""},

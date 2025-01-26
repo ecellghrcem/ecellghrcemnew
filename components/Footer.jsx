@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { MenuItem } from "./ui/navbar-menu";
-import logo from '../public/Ecell.ico';
+import logo from '../public/Ecelllogo.jpg';
 import { FaInstagram, FaTwitter, FaGithub, FaYoutube, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
@@ -31,7 +31,7 @@ const Footer = () => {
       </div>
       
       <div className="flex flex-col text-center md:text-left mb-8 md:mb-0">
-        <h3 className="mb-4 font-bold text-blue-400 text-lg">Connect With Us</h3>
+        <h3 className="mb-4 font-bold text-orange-500 text-lg">Connect With Us</h3>
         <ul className="list-none p-0 space-y-2">
           <li>
             <Link href={"/"}>
