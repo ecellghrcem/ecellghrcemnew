@@ -45,14 +45,14 @@ const content = [
 export default function Page(): JSX.Element {
   return (
     <div>
-      <div className="bg-gradient-to-br from-gray-900 via-gray-800 to-black">
+      <div className="bg-[rgba(16,18,24,1)]">
        <Hero />
        <div className="pl-10 pr-10">
-        <h1 className=" m-10 text-7xl font-bold">About Us</h1>
+        <h1 className=" m-10 text-7xl text-center font-bold">About Us</h1>
        <StickyScroll content={content} />
        </div>
        <div>
-       <h1 className=" m-10 text-7xl font-bold">Testimonial</h1>
+       <h1 className=" m-10 text-7xl text-center font-bold">Testimonial</h1>
        <AnimatedTestimonialsDemo/>
        </div>
       </div>

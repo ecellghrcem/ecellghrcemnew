@@ -56,7 +56,7 @@ const content = [
 
 export default function StickyScrollRevealDemo() {
   return (
-    <div className="p-10 bg-gradient-to-br from-gray-900 via-gray-800 to-black ">
+    <div className="p-10 bg-[rgba(16,18,24,1)] ">
       <section className="py-20 relative z-10">
         <div className="px-4 mx-auto text-center max-w-7xl sm:px-6 lg:px-8">
           <motion.h1
