@@ -1,5 +1,5 @@
 "use client"
-
+import { PinContainer } from "../ui/3d-pin";
 import React, { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Calendar, Clock, MapPin, Code, Archive } from "lucide-react"
@@ -91,9 +91,14 @@ export default function EventsPage({ initialEvents }: { initialEvents?: Event[] 
                 </div>
               ) : (
                 filteredEvents.map((event, index) => (
-                  <motion.div
+                  <div className="h-[40rem] w-full flex items-center justify-center ">
+                    <PinContainer
+                    title="/ui.aceternity.com"
+                    href="https://twitter.com/mannupaaji"
+                    >
+                      <motion.div
                     key={event.id}
-                    className="overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 shadow-xl rounded-xl mx-auto w-full max-w-[300px] border border-gray-700"
+                    className="overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900 shadow-xl rounded-xl mx-auto max-w-[400px] max-h-[600px]  w-[300px] border border-gray-700"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -156,6 +161,9 @@ export default function EventsPage({ initialEvents }: { initialEvents?: Event[] 
                       </motion.p>
                     </div>
                   </motion.div>
+
+                      </PinContainer>
+                      </div>
                 ))
               )}
             </motion.div>
