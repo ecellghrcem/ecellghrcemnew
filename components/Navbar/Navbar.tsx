@@ -212,10 +212,10 @@ function Navbar({ className }: { className?: string }) {
         </div>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="absolute top-16 left-0 w-full bg-black text-white p-5 flex flex-col items-center"
+            // initial={{ opacity: 0, y: -20 }}
+            // animate={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 0.5 }}
+            className="absolute  left-0 w-full bg-black text-white p-5 flex flex-col"
           >
             {menuItems}
           </motion.div>

@@ -7,7 +7,7 @@ import { FaInstagram, FaTwitter, FaGithub, FaYoutube, FaLinkedin } from 'react-i
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col md:flex-row justify-around items-center md:items-start p-8 bg-black text-white">
+    <footer className="flex flex-col md:flex-row justify-between items-center md:items-start p-8 bg-[rgba(16,18,24,1)] text-white">
       <div className="flex flex-col items-center mb-8 md:mb-0">
         <Image src={logo} alt="College Club" width={100} height={100} />
 
@@ -29,7 +29,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      
+      <div className='items-center justify-center flex gap-16'>
       <div className="flex flex-col text-center md:text-left mb-8 md:mb-0">
         <h3 className="mb-4 font-bold text-orange-500 text-lg">Connect With Us</h3>
         <ul className="list-none p-0 space-y-2">
@@ -61,7 +61,7 @@ const Footer = () => {
         </ul>
       </div>
       
-      <div className="flex flex-col text-center md:text-left mb-8 md:mb-0">
+      {/* <div className="flex flex-col text-center md:text-left mb-8 md:mb-0">
         <h3 className="mb-4 text-lg">Useful Links</h3>
         <ul className="list-none p-0 space-y-2">
           <li>
@@ -81,7 +81,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      
+       */}
       <div className="flex flex-col text-center md:text-left">
         <h4 className="mb-4 text-lg">Resources</h4>
         <ul className="list-none p-0 space-y-2">
@@ -101,6 +101,7 @@ const Footer = () => {
             </Link>
           </li>
         </ul>
+      </div>
       </div>
     </footer>
   );

@@ -65,47 +65,12 @@ function Navbar({ className }: { className?: string }) {
         <span>Contact Us</span>
         </Link>
       </motion.div>
-      {/* <motion.div
-        whileHover={{ scale: 1.1, color: "#ff8a00" }}
-        whileTap={{ scale: 0.9 }}
-        className="mx-4 cursor-pointer"
-      >
-        <span>Blogs</span>
-      </motion.div> */}
       <motion.div
         whileHover={{ scale: 1.1, color: "#ff8a00" }}
         whileTap={{ scale: 0.9 }}
         className="mx-4 cursor-pointer"
       >
-        <HoverCard.Root openDelay={100} closeDelay={100}>
-          <HoverCard.Trigger asChild>
-            <Link href="/Auth/Login">
-            <span>Join Us</span>
-            </Link>
-          </HoverCard.Trigger>
-          <HoverCard.Portal>
-            <HoverCard.Content className="bg-black text-white  mt-[22px] w-[120px] z-50 border-[1px] border-[#ffffff] rounded-lg cursor-pointer p-3">
-              <div>
-                <motion.div
-                  whileHover={{ backgroundColor: "#333332" }}
-                  className="p-2 rounded-lg cursor-pointer"
-                >
-                  <Link href="/Auth/Signup">
-                    <span className="font-bold">Signup</span>
-                  </Link>
-                </motion.div>
-                <motion.div
-                  whileHover={{ backgroundColor: "#333332" }}
-                  className="p-2 rounded-lg cursor-pointer"
-                >
-                  <Link href="/Auth/Login">
-                    <span className="font-bold">Login</span>
-                  </Link>
-                </motion.div>
-              </div>
-            </HoverCard.Content>
-          </HoverCard.Portal>
-        </HoverCard.Root>
+        <span>Blogs</span>
       </motion.div>
     </>
   );
@@ -152,10 +117,10 @@ function Navbar({ className }: { className?: string }) {
         </div>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="absolute top-16 left-0 w-full bg-black text-white p-5 flex flex-col items-center"
+            // initial={{ opacity: 0, y: -20 }}
+            // animate={{ opacity: 1, y: 0 }}
+            // transition={{ duration: 0.5 }}
+            className="absolute top-16 left-0 w-full bg-black text-white p-10 gap-5 flex flex-col"
           >
             {menuItems}
           </motion.div>
