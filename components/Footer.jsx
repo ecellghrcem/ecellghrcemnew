@@ -2,16 +2,16 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { MenuItem } from "./ui/navbar-menu";
-import logo from '../public/Ecelllogo.jpg';
+import logo from '../public/white transperent.png';
 import { FaInstagram, FaTwitter, FaGithub, FaYoutube, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
   return (
     <footer className="flex flex-col md:flex-row justify-between items-center md:items-start p-8 bg-[rgba(16,18,24,1)] text-white">
       <div className="flex flex-col items-center mb-8 md:mb-0">
-        <Image src={logo} alt="College Club" width={100} height={100} />
+        <Image src={logo} alt="College Club" width={150} height={150} className='mr-20' />
 
-        <div className='mt-6 flex space-x-4'>
+        <div className=' flex space-x-4'>
           <Link href={"/"}>
           <FaInstagram className='text-2xl' />
           </Link>
