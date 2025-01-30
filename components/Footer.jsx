@@ -60,28 +60,6 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      
-      {/* <div className="flex flex-col text-center md:text-left mb-8 md:mb-0">
-        <h3 className="mb-4 text-lg">Useful Links</h3>
-        <ul className="list-none p-0 space-y-2">
-          <li>
-            <Link href={"/aboutus"}>
-              <MenuItem item="About Us" />
-            </Link>
-          </li>
-          <li>
-            <Link href={"/contactus"}>
-              <MenuItem item="Contact" />
-            </Link>
-          </li>
-          <li>
-            <Link href={"/events"}>
-              <MenuItem item='Events' />
-            </Link>
-          </li>
-        </ul>
-      </div>
-       */}
       <div className="flex flex-col text-center md:text-left">
         <h4 className="mb-4 text-lg">Resources</h4>
         <ul className="list-none p-0 space-y-2">
