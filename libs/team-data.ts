@@ -52,7 +52,7 @@ export const teams: Teams = {
       mail: "", // Add email if available
     },
   ],
-  "Technical Team": [
+  "Tech": [
     {
       id: 1,
       name: "Tousif Tamboli",
@@ -95,7 +95,7 @@ export const teams: Teams = {
       role: "Member",
       image: "img/team/Devanshu Patil.jpg",
       bio: "Devanshu is a full-stack developer with a passion for building scalable web applications.",
-      linkedin: "https://linkedin.com/in/devanshu-patil",
+      linkedin: "https://linktr.ee/devanshupatil",
       mail: "",
     },
     {
@@ -117,7 +117,7 @@ export const teams: Teams = {
       mail: "",
     },
   ],
-  "Public Relational Team": [
+  "Public Relational": [
     {
       id: 8,
       name: "Tejashvi Tiwari",
@@ -191,7 +191,7 @@ export const teams: Teams = {
       mail: "",
     },
   ],
-  "Event Management Team": [
+  "Event Management": [
     {
       id: 16,
       name: "Vrushali Chavan",
@@ -265,7 +265,7 @@ export const teams: Teams = {
       mail: "",
     },
   ],
-  "Social Media Team": [
+  "Social Media": [
     {
       id: 24,
       name: "Tanmay Pagare",
@@ -303,7 +303,7 @@ export const teams: Teams = {
       mail: "",
     },
   ],
-  "Videography & Content Team": [
+  "Videography & Content": [
     {
       id: 28,
       name: "Samyak Ingle",
@@ -331,17 +331,17 @@ export const teams: Teams = {
       linkedin: "",
       mail: "",
     },
-    {
-      id: 31,
-      name: "Gaurav Khandelwal",
-      role: "Member",
-      image: "img/team/gourav-khandelwal.jpg",
-      bio: "Gaurav is a creative content creator with a focus on visual storytelling.",
-      linkedin: "https://www.linkedin.com/in/gaurav-khandelwal-15881828a",
-      mail: "",
-    },
+    // {
+    //   id: 31,
+    //   name: "Gaurav Khandelwal",
+    //   role: "Member",
+    //   image: "img/team/gourav-khandelwal.jpg",
+    //   bio: "Gaurav is a creative content creator with a focus on visual storytelling.",
+    //   linkedin: "https://www.linkedin.com/in/gaurav-khandelwal-15881828a",
+    //   mail: "",
+    // },
   ],
-  "Finance Team": [
+  "Finance": [
     {
       id: 32,
       name: "Pruthviraj Chavan",
@@ -361,7 +361,7 @@ export const teams: Teams = {
       mail: "",
     },
   ],
-  "Documentation Team": [
+  "Documentation": [
     {
       id: 34,
       name: "Raj Chintawar",
@@ -399,7 +399,7 @@ export const teams: Teams = {
       mail: "",
     },
   ],
-  "Outreach Team": [
+  "Outreach": [
     {
       id: 38,
       name: "Ghananshu Mali",
@@ -437,7 +437,7 @@ export const teams: Teams = {
       mail: "",
     },
   ],
-  "Design Team": [
+  "Design": [
     {
       id: 42,
       name: "Shubham Singh",
