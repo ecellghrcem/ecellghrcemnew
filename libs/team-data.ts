@@ -117,7 +117,7 @@ export const teams: Teams = {
       mail: "",
     },
   ],
-  "Public Relational": [
+  "Public Relationals": [
     {
       id: 8,
       name: "Tejashvi Tiwari",
